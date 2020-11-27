@@ -63,6 +63,7 @@ SK6812 | 5v | RGBW
 APA102 | 5v | C/D
 WS2801 | 5v | C/D
 LPD8806 | 5v | C/D
+HD108 | 5V | 16-bit RGB (8-bit implemented)
 TM1814 | 12v | RGBW
 WS2811 | 12v | 3-LED segments
 WS2815 | 12v | 

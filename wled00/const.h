@@ -102,6 +102,7 @@
 #define TYPE_LPD8806             52
 #define TYPE_P9813               53
 #define TYPE_TM1814              54
+// #define TYPE_HD108               55            //16-bit chipset
 
 
 //Button type

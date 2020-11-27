@@ -403,6 +403,9 @@ void serializeConfig() {
   #ifdef USE_APA102
     ledType = TYPE_APA102;
   #endif
+  // #ifdef USE_HD108
+  //   ledType = TYPE_HD108;
+  // #endif
   #ifdef USE_LPD8806
     ledType = TYPE_LPD8806;
   #endif
