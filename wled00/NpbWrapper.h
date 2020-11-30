@@ -44,7 +44,7 @@
 
 //END CONFIGURATION
 
-#if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813)// || defined(USE_HD108)
+#if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813) || defined(USE_HD108)
  #ifndef CLKPIN
   #define CLKPIN 0
  #endif
@@ -121,7 +121,7 @@
  #elif defined(USE_P9813)
   #define PIXELMETHOD P9813Method  
  #elif defined(USE_HD108)
-  #define PIXELMETHOD HD108
+  #define PIXELMETHOD HD108Method
  #else
   #define PIXELMETHOD NeoEsp32Rmt0Ws2812xMethod
  #endif
@@ -138,7 +138,7 @@
  #elif defined(USE_P9813)
   #define PIXELMETHOD P9813Method  
  #elif defined(USE_HD108)
-  #define PIXELMETHOD HD108
+  #define PIXELMETHOD HD108Method
  #elif LEDPIN == 2
   #define PIXELMETHOD NeoEsp8266Uart1Ws2813Method //if you get an error here, try to change to NeoEsp8266UartWs2813Method or update Neopixelbus
  #elif LEDPIN == 3
@@ -166,9 +166,9 @@
 #elif defined(USE_P9813)
  #define PIXELFEATURE3 P9813BgrFeature 
  #define PIXELFEATURE4 NeoGrbwFeature   
- // #elif defined(USE_HD108)
- //  #define PIXELFEATURE3 HD108BgrFeature 
- //  #define PIXELFEATURE4 HD108GrbwFeature   
+#elif defined(USE_HD108)
+ #define PIXELFEATURE3 DotStarBgrFeature 
+ #define PIXELFEATURE4 DotStarLbgrFeature   
 #else
  #define PIXELFEATURE3 NeoGrbFeature
  #define PIXELFEATURE4 NeoGrbwFeature
@@ -210,7 +210,7 @@ public:
     switch (_type)
     {
       case NeoPixelType_Grb:
-      #if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813)// || defined(USE_HD108)
+      #if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813) || defined(USE_HD108)
         _pGrb = new NeoPixelBrightnessBus<PIXELFEATURE3,PIXELMETHOD>(countPixels, CLKPIN, DATAPIN);
       #else
         _pGrb = new NeoPixelBrightnessBus<PIXELFEATURE3,PIXELMETHOD>(countPixels, LEDPIN);
@@ -219,7 +219,7 @@ public:
       break;
 
       case NeoPixelType_Grbw:
-      #if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813)// || defined(USE_HD108)
+      #if defined(USE_APA102) || defined(USE_WS2801) || defined(USE_LPD8806) || defined(USE_P9813) || defined(USE_HD108)
         _pGrbw = new NeoPixelBrightnessBus<PIXELFEATURE4,PIXELMETHOD>(countPixels, CLKPIN, DATAPIN);
       #else
         _pGrbw = new NeoPixelBrightnessBus<PIXELFEATURE4,PIXELMETHOD>(countPixels, LEDPIN);
