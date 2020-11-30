@@ -37,7 +37,7 @@
 
 #define FASTLED_INTERNAL //remove annoying pragma messages
 #define USE_GET_MILLISECOND_TIMER
-#include "FastLED16.h"
+#include "FastLED.h"
 
 #define DEFAULT_BRIGHTNESS (uint8_t)127
 #define DEFAULT_MODE       (uint8_t)0
