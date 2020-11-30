@@ -120,8 +120,8 @@
   #define PIXELMETHOD NeoTm1814Method  
  #elif defined(USE_P9813)
   #define PIXELMETHOD P9813Method  
- // #elif defined(USE_HD108)
- //  #define PIXELMETHOD HD108
+ #elif defined(USE_HD108)
+  #define PIXELMETHOD HD108
  #else
   #define PIXELMETHOD NeoEsp32Rmt0Ws2812xMethod
  #endif
@@ -137,8 +137,8 @@
   #define PIXELMETHOD NeoTm1814Method  
  #elif defined(USE_P9813)
   #define PIXELMETHOD P9813Method  
- // #elif defined(USE_HD108)
- //  #define PIXELMETHOD HD108
+ #elif defined(USE_HD108)
+  #define PIXELMETHOD HD108
  #elif LEDPIN == 2
   #define PIXELMETHOD NeoEsp8266Uart1Ws2813Method //if you get an error here, try to change to NeoEsp8266UartWs2813Method or update Neopixelbus
  #elif LEDPIN == 3
