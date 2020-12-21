@@ -167,15 +167,15 @@
  #define PIXELFEATURE3 P9813BgrFeature 
  #define PIXELFEATURE4 NeoGrbwFeature   
 #elif defined(USE_HD108)
- #define PIXELFEATURE3 DotStarBgrFeature 
- #define PIXELFEATURE4 DotStarLbgrFeature   
+ #define PIXELFEATURE3 HD108RgbFeature 
+ #define PIXELFEATURE4 DotStarLbgrFeature //Lrgb not implemented for HD108
 #else
  #define PIXELFEATURE3 NeoGrbFeature
  #define PIXELFEATURE4 NeoGrbwFeature
 #endif
 
 
-#include <NeoPixelBrightnessBus.h>
+#include <src/dependencies/NeoPixelBus/src/NeoPixelBrightnessBus.h>
 
 enum NeoPixelType
 {
